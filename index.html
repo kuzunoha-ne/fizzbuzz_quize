@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<header>
+    <meta charset="utf-8"/>
+    <title>FizzBuzzQuize</title>
+</header>
+<body>
+    <div id="app">
+        <p><button @click="init()">初期化</button></p>
+        <p>{{ questions.one }} + {{ questions.two }} + {{ questions.three }} = ? </p>
+        <button @click="judg('FizzBuzz')">FizzBuzz</button>
+        <button @click="judg('Fizz')">Fizz</button @click="judg('Fizz')">
+        <button @click="judg('Buzz')">Buzz</button @click="judg('Buzz')">
+        <button @click="judg('Anything')">Anything</button>
+        <h1 v-if="!answered">答えを選んでください</h1>
+        <h1 v-else-if="status">{{result}}すごい</h1>
+        <h1 v-else>{{result}}まちがってるよ</h1>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
+
